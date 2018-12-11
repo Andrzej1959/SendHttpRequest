@@ -41,6 +41,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBoxContent = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.radioButtonJSON = new System.Windows.Forms.RadioButton();
+            this.radioButtonText = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
@@ -48,18 +51,15 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.radioButtonText = new System.Windows.Forms.RadioButton();
-            this.radioButtonJSON = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonPUT
@@ -178,7 +178,8 @@
             this.textBoxContent.Name = "textBoxContent";
             this.textBoxContent.Size = new System.Drawing.Size(406, 346);
             this.textBoxContent.TabIndex = 19;
-            this.textBoxContent.Text = "Example request content\r\nhttp://lukan.sytes.net:1880/pi\r\nLinia 2";
+            this.textBoxContent.Text = "Example request content\r\nhttp://lukan.sytes.net:1880/pi\r\nhttp://wekrmpc2.am.gdyni" +
+    "a.pl:1880/pi\r\nLinia 2";
             // 
             // panel5
             // 
@@ -198,6 +199,37 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(406, 257);
             this.panel5.TabIndex = 18;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.radioButtonJSON);
+            this.panel6.Controls.Add(this.radioButtonText);
+            this.panel6.Location = new System.Drawing.Point(67, 218);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(154, 36);
+            this.panel6.TabIndex = 19;
+            // 
+            // radioButtonJSON
+            // 
+            this.radioButtonJSON.AutoSize = true;
+            this.radioButtonJSON.Location = new System.Drawing.Point(75, 11);
+            this.radioButtonJSON.Name = "radioButtonJSON";
+            this.radioButtonJSON.Size = new System.Drawing.Size(53, 17);
+            this.radioButtonJSON.TabIndex = 1;
+            this.radioButtonJSON.Text = "JSON";
+            this.radioButtonJSON.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonText
+            // 
+            this.radioButtonText.AutoSize = true;
+            this.radioButtonText.Checked = true;
+            this.radioButtonText.Location = new System.Drawing.Point(11, 10);
+            this.radioButtonText.Name = "radioButtonText";
+            this.radioButtonText.Size = new System.Drawing.Size(42, 17);
+            this.radioButtonText.TabIndex = 0;
+            this.radioButtonText.TabStop = true;
+            this.radioButtonText.Text = "text";
+            this.radioButtonText.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -273,6 +305,16 @@
             this.panel2.Size = new System.Drawing.Size(443, 259);
             this.panel2.TabIndex = 22;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label4.Location = new System.Drawing.Point(3, 235);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(51, 13);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Content";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -292,47 +334,6 @@
             this.panel3.Size = new System.Drawing.Size(443, 348);
             this.panel3.TabIndex = 23;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(3, 235);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 13);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "Content";
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.radioButtonJSON);
-            this.panel6.Controls.Add(this.radioButtonText);
-            this.panel6.Location = new System.Drawing.Point(67, 218);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(154, 36);
-            this.panel6.TabIndex = 19;
-            // 
-            // radioButtonText
-            // 
-            this.radioButtonText.AutoSize = true;
-            this.radioButtonText.Checked = true;
-            this.radioButtonText.Location = new System.Drawing.Point(11, 10);
-            this.radioButtonText.Name = "radioButtonText";
-            this.radioButtonText.Size = new System.Drawing.Size(42, 17);
-            this.radioButtonText.TabIndex = 0;
-            this.radioButtonText.TabStop = true;
-            this.radioButtonText.Text = "text";
-            this.radioButtonText.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonJSON
-            // 
-            this.radioButtonJSON.AutoSize = true;
-            this.radioButtonJSON.Location = new System.Drawing.Point(75, 11);
-            this.radioButtonJSON.Name = "radioButtonJSON";
-            this.radioButtonJSON.Size = new System.Drawing.Size(53, 17);
-            this.radioButtonJSON.TabIndex = 1;
-            this.radioButtonJSON.Text = "JSON";
-            this.radioButtonJSON.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -347,14 +348,14 @@
             this.panel1.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
