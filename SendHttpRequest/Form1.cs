@@ -19,10 +19,13 @@ namespace SendHttpRequest
         {
             InitializeComponent();
         }
-        
+
+        HttpClient clientHttp;
+
+
         private async void button1_ClickAsync(object sender, EventArgs e)
         {
-            HttpClient clientHttp = new HttpClient();
+            if(clientHttp == null) clientHttp = new HttpClient();
             HttpRequestMessage requestMessage = new HttpRequestMessage();
 
             try
@@ -31,7 +34,7 @@ namespace SendHttpRequest
                 if (radioButton2.Checked) requestMessage.Method = HttpMethod.Post;
                 if (radioButton3.Checked) requestMessage.Method = HttpMethod.Put;
                 if (radioButton4.Checked) requestMessage.Method = HttpMethod.Delete;
-                //requestMessage.Method = HttpMethod.Head;
+                // requestMessage.Method = HttpMethod.Head;
 
                 HttpContent content = new StringContent(textBoxContent.Text);
               
@@ -39,13 +42,15 @@ namespace SendHttpRequest
 
                 requestMessage.Properties.Add("WłaściwośćKlucz", "Wartość");
                 requestMessage.Headers.Add("User-Agent", "programHTTPclient");
+                requestMessage.Headers.Add("Connection", "keep-alive");         
+
 
                 string url = textBoxUri.Text;
 
                 requestMessage.RequestUri = new Uri(url);
                 if (requestMessage.Method != HttpMethod.Get)
                     requestMessage.Content = content;
-
+                
                 var response = await clientHttp.SendAsync(requestMessage);
                    
                 labelResponse.Text = await response.Content.ReadAsStringAsync();
